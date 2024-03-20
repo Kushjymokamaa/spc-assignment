@@ -1,0 +1,66 @@
+QUESTION ONE
+#pront the user to enter customerID,customerName
+echo"enter customerID:"
+read customer_id
+echo"Enter customerName:"
+read customer_name
+echo"enter unitconsumed:"
+read units_consumed
+#calculate the charges based on unit consumed
+if[$unitconsumed-it200];then
+total_bill=$((unitconsumed*120))
+elseif[$unitconsumed-ge200]&&[$unitconsumed-
+total_bill=$((unitconsumed*150))
+elseif[$unitconsumed-ge 400]&&[unitconsumed-
+total_bill=$((unitconsumed*180))
+else
+total_bill=$((unitconsumed*200))
+#calculate the total bill
+echo"customerID:$customerID"
+echo"customerName:$customerName"
+echo"Total Bill:$Total_bill Ksh"
+
+QUESTION TWO
+#prompt the user to enter employee name,hours of work and rate per hour
+read-p"Enter employee name:"name
+read-p"Enter hours worked:"hours_worked
+read-p"Enter rate per hour:"rate_per_hour
+#calculate tax
+if[$basic_pay-gt 70000];then
+tax=$((25*basic_pay/100))
+elseif[$basic_pay-ge 15000]&&[$basic_pay-le 7000
+tax=$((15*basic_pay/100))
+else
+tax=0
+#calculate net pay
+net_pay=$((basic_pay-tax))
+#display results
+echo"Employee Name:$name"
+echo"Basic pay:$basic_pay"
+echo"Tax:$tax"
+echo"Net pay:$net_pay"
+
+QUESTION THREE
+#include
+#include
+int main(){
+FILE*file;
+file=fopen("example.txt","w")
+if(file==NULL){
+printf("enter opening the file.\n");
+return 1;
+}
+fprintf(file,"Hello World");
+fclose(file);
+file=fopen("example.txt","r");
+if(file==NULL){
+printf("Error opening the file.\n);
+return 1;
+}
+char content[100];
+fgets(content,sizeof(contect),file);
+printf("content:%s\n",contect);
+fclose(file);
+return 0;
+}
+
